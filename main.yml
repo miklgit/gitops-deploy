@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: true
+
+  tasks:
+    - name: Display FQDN
+      ansible.builtin.debug:
+        msg: "{{ ansible_fqdn }}"
+
+    - name: Import simaafvie.general.test role
+      ansible.builtin.import_role:
+        name: simaafvie.general.test
